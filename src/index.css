@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Press+Start+2P&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #2c3e50;
+}
+
+h1,
+h2,
+h3,
+input,
+button {
+  font-family: 'Press Start 2P', system-ui;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: linear-gradient(135deg, #e0f7fa, #fff3e0);
+  gap: 20px;
+}
+
+header {
+  display: flex;
+  align-items: stretch;
+}
+
+header,
+.main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+header input {
+  flex: 1;
+  border-radius: 20px;
+  outline: none;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.8);
+  transition: background 200ms, box-shadow 200ms;
+}
+
+header input:focus {
+  background: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+header button {
+  border-radius: 20px;
+  background: #ff6f61;
+  transition-duration: 200ms;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header button:hover {
+  background: #ff3d2e;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Reduced gap between todo cards */
+  margin-top: 20px;
+  /* Added margin to give space between header and first todo card */
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 200ms, box-shadow 200ms;
+}
+
+.todoItem:hover {
+  background: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.todoItem p {
+  flex: 1;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.actionsContainer button {
+  transition-duration: 200ms;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.actionsContainer button:hover {
+  opacity: 0.7;
+}
+
+@media (min-width: 640px) {
+
+  header button,
+  header input {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+}
